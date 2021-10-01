@@ -1,0 +1,18 @@
+tack size              (kbytes, -s) unlimited
+running sobel_dp...
+   Edge Detection Sequential Runtime: 12.958624 ms
+   Edge Detection Parallel Runtime: 0.046976 ms
+   Pixel Counting Sequential Runtime: 14.929952 ms
+   Pixel Counting Parallel Runtime: 3.965184 ms
+   file: img/img_4.ppm, num_pix_found: 170040, cm^2: 364
+running canny_dp...
+   Edge Detection Sequential Runtime: 687.511108 ms
+   Edge Detection Parallel Runtime: 0.759712 ms
+   Pixel Count Parallel Runtime: 3.251104 ms
+   file: img/img_4.ppm, num_pix_found: 169419, cm^2: 362
+running laplacian_dp...
+file img/img_4.ppm    threshold 0
+   Edge Detection Sequential Runtime: 933.809326 ms
+   Edge Detection Parallel Runtime: 0.906880 ms
+   Pixel Counting Parallel Runtime: 3.778112 ms
+   file: img/img_4.ppm, num_pix_found: 171051, cm^2: 366

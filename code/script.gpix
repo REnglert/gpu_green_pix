@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH --account=soc-gpu-kp
+#SBATCH --partition=soc-gpu-kp
+#SBATCH --job-name=cs6235-gpix
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=1
+#SBATCH --gres=gpu:p100:1
+#SBATCH --mem=10G
+#SBATCH --time=00:1:00
+#SBATCH --export=ALL
+#SBATCH --qos=soc-gpu-kp     
+ulimit -c unlimited -s
+# ./gpix.bin img/img_1.ppm img/img_2.ppm img/img_3.ppm img/img_4.ppm img/img_5.ppm img/img_6.ppm img/img_7.ppm img/img_8.ppm img/img_9.ppm img/img_10.ppm img/img_11.ppm img/img_12.ppm
+echo "running sobel_dp..."
+./sobel_dp.bin img/img_4.ppm
+
+echo "running canny_dp..."
+./canny_dp.bin img/img_4.ppm
+
+echo "running laplacian_dp..."
+./laplacian_dp.bin img/img_4.ppm

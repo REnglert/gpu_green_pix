@@ -1,0 +1,1 @@
+int *sobel(int xsize, int ysize, int maxval, unsigned int* pic, char* filename);

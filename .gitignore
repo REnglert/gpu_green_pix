@@ -1,0 +1,11 @@
+.DS_Store
+
+# binary executables
+*.bin
+*.o
+
+# slurm output files
+*.out
+core.*
+
+*.ppm
